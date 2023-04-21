@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import API_KEY from "../config";
+import "./Weather.css";
 const Weather = () => {
   const params = new Proxy(new URLSearchParams(window.location.search), {
     get: (searchParams, prop) => searchParams.get(prop),
@@ -8,18 +8,24 @@ const Weather = () => {
   const [searchInfo, setSearchInfo] = useState(value);
   const [weatherData, setWeatherData] = useState([""]);
   const fetchData = async () => {
-    base_url = "http://api.weatherapi.com/v1/current.json?key=";
-    final_url = base_url + API_KEY + "&q=" + searchInfo;
-    const response = await fetch(final_url);
+    const response = await fetch(
+      `http://api.weatherapi.com/v1/forecast.json?key=${
+        import.meta.env.VITE_REACT_API_KEY
+      }&q=${searchInfo}&days=7`
+    );
     const data = await response.json();
     setWeatherData(data);
   };
+  const formatForecast = () => {};
   useEffect(() => {
     fetchData();
   }, []);
   return (
     <div className="weatherCard">
-      <pre>{JSON.stringify(weatherData, null, 2)}</pre>
+      <div className="currentWeather">some data</div>
+      <div className="windInfo">wind data</div>
+      <div className="currentForecast">current forecast data</div>
+      <div className="sevendayForecast">sevenday forecast data</div>
     </div>
   );
 };
