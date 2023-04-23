@@ -80,3 +80,69 @@
     top: 35%;
     opacity: .5;
 }
+
+.windInfo {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Carlito', sans-serif;
+}
+
+.date {
+    position: absolute;
+    top: 1%;
+    left: 5%;
+    opacity: .5;
+}
+
+.time {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    font-size: 2rem;
+}
+
+.infoContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: space-evenly;
+    align-content: stretch;
+    column-gap: 8px;
+    row-gap: 30px;
+    position: relative;
+    top: 10px;
+}
+
+.row1 {
+    flex-basis: 20%;
+}
+
+.row2 {
+    flex-basis: 20%;
+}
+
+.info {
+    font-size: 2rem;
+    background-color: rgba(0, 0, 0);
+    border-radius: 10px;
+    padding: 1%;
+}
+
+.itext {
+    font-size: 1rem;
+    opacity: .5;
+}
+
+.icon {
+    font-size: 1.5rem;
+    position: relative;
+    top: 6px;
+}
+
+.currentData {
+    position: relative;
+    left: 4%;
+}

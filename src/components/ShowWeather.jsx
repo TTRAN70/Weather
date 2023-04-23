@@ -32,50 +32,58 @@ const ShowWeather = (weatherData) => {
         </div>
       </div>
       <div className="windInfo">
-        <h3>{weatherData.weatherData.location.localtime.substring(0, 11)}</h3>
-        <h2>{weatherData.weatherData.location.localtime.substring(11, 17)}</h2>
+        <h3 className="date">
+          {weatherData.weatherData.location.localtime.substring(0, 11)}
+        </h3>
+        <h2 className="time">
+          {weatherData.weatherData.location.localtime.substring(11, 17)}
+        </h2>
         <div className="infoContainer">
-          <div className="info">
-            <div>
-              <WiThermometer /> High
+          <div className="info row1">
+            <div className="itext">
+              <WiThermometer className="icon" /> High
             </div>
-            <div>
+            <div className="currentData">
               {weatherData.weatherData.forecast.forecastday[0].day.maxtemp_f}°F
             </div>
           </div>
-          <div className="info">
-            <div>
-              <FiWind /> Wind
+          <div className="info row1">
+            <div className="itext">
+              <FiWind className="icon" /> Wind
             </div>
-            <div>{weatherData.weatherData.current.wind_mph}mph</div>
+            <div className="currentData">
+              {weatherData.weatherData.current.wind_mph}mph
+            </div>
           </div>
-          <div className="info">
-            <div>
-              <WiSunrise /> Sunrise
+          <div className="info row1">
+            <div className="itext">
+              <WiSunrise className="icon" /> Sunrise
             </div>
-            <div>
+            <div className="currentData">
               {weatherData.weatherData.forecast.forecastday[0].astro.sunrise}
             </div>
           </div>
-          <div className="info">
-            <div>
-              <WiHumidity /> Humidity
+          <div className="info row1">
+            <div className="itext">
+              <WiHumidity className="icon" /> Humidity
             </div>
-            <div>{weatherData.weatherData.current.humidity}%</div>
+            <div className="currentData">
+              {weatherData.weatherData.current.humidity}%
+            </div>
           </div>
-          <div className="info">
-            <div>
-              <WiThermometerExterior /> Low
+          <div className="info row2">
+            <div className="itext">
+              <WiThermometerExterior className="icon" /> Low
             </div>
-            <div>
+            <div className="currentData">
               {weatherData.weatherData.forecast.forecastday[0].day.mintemp_f}°F
             </div>
           </div>
-          <div className="info">
-            <div>
-              <WiRain /> Chance of Rain
+          <div className="info row2">
+            <div className="itext">
+              <WiRain className="icon" /> Chance of Rain
             </div>
-            <div>
+            <div className="currentData">
               {
                 weatherData.weatherData.forecast.forecastday[0].day
                   .daily_chance_of_rain
@@ -83,19 +91,21 @@ const ShowWeather = (weatherData) => {
               %
             </div>
           </div>
-          <div className="info">
-            <div>
-              <WiSunset /> Sunset
+          <div className="info row2">
+            <div className="itext">
+              <WiSunset className="icon" /> Sunset
             </div>
-            <div>
+            <div className="currentData">
               {weatherData.weatherData.forecast.forecastday[0].astro.sunset}
             </div>
           </div>
-          <div className="info">
-            <div>
-              <BsThermometerHalf /> Feels Like
+          <div className="info row2">
+            <div className="itext">
+              <BsThermometerHalf className="icon" /> Feels Like
             </div>
-            <div>{weatherData.weatherData.current.feelslike_f}°F</div>
+            <div className="currentData">
+              {weatherData.weatherData.current.feelslike_f}°F
+            </div>
           </div>
         </div>
       </div>
