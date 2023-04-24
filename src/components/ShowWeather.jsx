@@ -1,4 +1,5 @@
 import "./ShowWeather.css";
+import moment from "moment";
 import { FiWind } from "react-icons/fi";
 import { BsThermometerHalf } from "react-icons/bs";
 import {
@@ -33,10 +34,16 @@ const ShowWeather = (weatherData) => {
       </div>
       <div className="windInfo">
         <h3 className="date">
-          {weatherData.weatherData.location.localtime.substring(0, 11)}
+          {moment(
+            weatherData.weatherData.location.localtime.substring(0, 11)
+          ).format("MMMM Do, YYYY")}
         </h3>
         <h2 className="time">
-          {weatherData.weatherData.location.localtime.substring(11, 17)}
+          Local Time:{" "}
+          {moment(
+            weatherData.weatherData.location.localtime.substring(11, 17),
+            "HH:mm"
+          ).format("hh:mm a")}
         </h2>
         <div className="infoContainer">
           <div className="info row1">
@@ -60,7 +67,7 @@ const ShowWeather = (weatherData) => {
               <WiSunrise className="icon" /> Sunrise
             </div>
             <div className="currentData">
-              {weatherData.weatherData.forecast.forecastday[0].astro.sunrise}
+              {weatherData.weatherData.forecast.forecastday[0].astro.sunrise.toLowerCase()}
             </div>
           </div>
           <div className="info row1">
@@ -96,7 +103,7 @@ const ShowWeather = (weatherData) => {
               <WiSunset className="icon" /> Sunset
             </div>
             <div className="currentData">
-              {weatherData.weatherData.forecast.forecastday[0].astro.sunset}
+              {weatherData.weatherData.forecast.forecastday[0].astro.sunset.toLowerCase()}
             </div>
           </div>
           <div className="info row2">
