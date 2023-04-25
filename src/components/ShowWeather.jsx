@@ -1,5 +1,6 @@
 import "./ShowWeather.css";
 import moment from "moment";
+import { useState, useEffect } from "react";
 import { FiWind } from "react-icons/fi";
 import { BsThermometerHalf } from "react-icons/bs";
 import {
@@ -11,6 +12,33 @@ import {
   WiSunset,
 } from "react-icons/wi";
 const ShowWeather = (weatherData) => {
+  const [hourlyWeather, setHourlyWeather] = useState([]);
+  const formatHourlyForecast = () => {
+    let hourArray = [];
+    let hour = parseInt(
+      weatherData.weatherData.location.localtime.substring(11, 14)
+    );
+    let day = 0;
+    for (let i = 0; i < 12; i++) {
+      if (hour < 24) {
+        hourArray.push(
+          weatherData.weatherData.forecast.forecastday[day].hour[hour]
+        );
+        hour++;
+      } else {
+        hour = 0;
+        day = 1;
+        hourArray.push(
+          weatherData.weatherData.forecast.forecastday[day].hour[hour]
+        );
+        hour++;
+      }
+    }
+    setHourlyWeather(hourArray);
+  };
+  useEffect(() => {
+    formatHourlyForecast();
+  }, []);
   return (
     <div className="weatherCard">
       <div className="currentWeather">
@@ -116,7 +144,26 @@ const ShowWeather = (weatherData) => {
           </div>
         </div>
       </div>
-      <div className="currentForecast">current forecast data</div>
+      <div className="hourlyForecast">
+        <div className="hourlyForecastContainer">
+          {hourlyWeather.map((item, index) => {
+            return (
+              <div className={`hourlyContainer ${index}`} key={index}>
+                <div>
+                  {moment(item.time.substring(11, 14), "H").format("h a")}
+                </div>
+                <div>
+                  <img src={item.condition.icon}></img>
+                </div>
+                <div>
+                  {item.chance_of_rain < 10 ? "" : item.chance_of_rain + "%"}
+                </div>
+                <div>{item.temp_f}°F</div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
       <div className="sevendayForecast">sevenday forecast data</div>
     </div>
   );
