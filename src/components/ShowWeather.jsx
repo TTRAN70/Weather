@@ -145,20 +145,35 @@ const ShowWeather = (weatherData) => {
         </div>
       </div>
       <div className="hourlyForecast">
+        <div className="hourlyTitle">Hourly Forecast</div>
         <div className="hourlyForecastContainer">
           {hourlyWeather.map((item, index) => {
+            if (index === 0) {
+              return (
+                <div className={`hourlyContainer ${index}`} key={index}>
+                  <div className="Firstchild">Now</div>
+                  <div className="Secondchild">
+                    <img src={item.condition.icon}></img>
+                  </div>
+                  <div className="Thirdchild">
+                    {item.chance_of_rain < 10 ? "" : item.chance_of_rain + "%"}
+                  </div>
+                  <div className="Fourthchild">{item.temp_f}°F</div>
+                </div>
+              );
+            }
             return (
               <div className={`hourlyContainer ${index}`} key={index}>
-                <div>
+                <div className="Firstchild">
                   {moment(item.time.substring(11, 14), "H").format("h a")}
                 </div>
-                <div>
+                <div className="Secondchild">
                   <img src={item.condition.icon}></img>
                 </div>
-                <div>
+                <div className="Thirdchild">
                   {item.chance_of_rain < 10 ? "" : item.chance_of_rain + "%"}
                 </div>
-                <div>{item.temp_f}°F</div>
+                <div className="Fourthchild">{item.temp_f}°F</div>
               </div>
             );
           })}
