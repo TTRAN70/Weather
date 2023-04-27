@@ -57,17 +57,17 @@
 }
 
 .cimage {
-   position: absolute;
-   top: 56%;
+   position: relative;
+   top: 22%;
    left: 3%;
 }
 
 .temp {
     font-size: 5rem;
-    left: 25%;
-    position: absolute;
+    left: 1%;
+    position: relative;
     bottom: 5%;
-    top: 50%;
+    top: 20%;
 }
 
 .cimage, .temp {
@@ -76,30 +76,27 @@
 
 .ctext {
     font-size: 3rem;
-    position: absolute;
-    top: 30%;
+    position: relative;
+    bottom: 30%;
     opacity: .5;
 }
 
 .windInfo {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Carlito', sans-serif;
 }
 
 .date {
-    position: absolute;
+    position: relative;
     top: 1%;
     left: 5%;
     opacity: .5;
 }
 
 .time {
-    position: absolute;
-    top: 5%;
+    position: relative;
+    bottom: 5%;
     left: 5%;
     font-size: 2rem;
 }
@@ -113,7 +110,8 @@
     column-gap: 8px;
     row-gap: 30px;
     position: relative;
-    top: 20px;
+    bottom: 8%;
+    left: 5%;
 }
 
 .row1 {
@@ -149,11 +147,10 @@
 
 .hourlyForecast {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     color: white;
     font-family: 'Carlito', sans-serif;
+    padding: 20px;
+    padding-bottom: 30px;
 }
 
 .hourlyForecastContainer { 
@@ -161,7 +158,8 @@
     width: 90%;
     justify-content: space-evenly;
     align-content: stretch;
-    column-gap: 20px;
+    column-gap: 30px;
+    margin: auto;
 }
 
 .hourlyContainer {
@@ -180,10 +178,12 @@
 }
 
 .hourlyTitle {
-    position: absolute;
-    top: 8%;
-    left: 45%;
-    background-color: rgb(0, 0, 0);
+    position: relative;
+    bottom: 5%;
+    left: 1%;
+    background-color: rgb(0, 0, 0, .5);
     padding: 5px;
+    display: inline-block;
+    border-radius: 5px;
 }
 

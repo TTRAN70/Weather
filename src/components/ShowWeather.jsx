@@ -10,9 +10,12 @@ import {
   WiThermometer,
   WiRain,
   WiSunset,
+  WiDirectionDown,
+  WiDirectionUp,
 } from "react-icons/wi";
 const ShowWeather = (weatherData) => {
   const [hourlyWeather, setHourlyWeather] = useState([]);
+  const [dailyWeather, setDailyWeather] = useState([]);
   const formatHourlyForecast = () => {
     let hourArray = [];
     let hour = parseInt(
@@ -36,8 +39,16 @@ const ShowWeather = (weatherData) => {
     }
     setHourlyWeather(hourArray);
   };
+  const formatDailyForecast = () => {
+    let dailyArray = [];
+    for (let i = 0; i < 7; i++) {
+      dailyArray.push(weatherData.weatherData.forecast.forecastday[i]);
+    }
+    setDailyWeather(dailyArray);
+  };
   useEffect(() => {
     formatHourlyForecast();
+    formatDailyForecast();
   }, []);
   return (
     <div className="weatherCard">
@@ -148,24 +159,12 @@ const ShowWeather = (weatherData) => {
         <div className="hourlyTitle">Hourly Forecast</div>
         <div className="hourlyForecastContainer">
           {hourlyWeather.map((item, index) => {
-            if (index === 0) {
-              return (
-                <div className={`hourlyContainer ${index}`} key={index}>
-                  <div className="Firstchild">Now</div>
-                  <div className="Secondchild">
-                    <img src={item.condition.icon}></img>
-                  </div>
-                  <div className="Thirdchild">
-                    {item.chance_of_rain < 10 ? "" : item.chance_of_rain + "%"}
-                  </div>
-                  <div className="Fourthchild">{item.temp_f}°F</div>
-                </div>
-              );
-            }
             return (
               <div className={`hourlyContainer ${index}`} key={index}>
                 <div className="Firstchild">
-                  {moment(item.time.substring(11, 14), "H").format("h a")}
+                  {index !== 0
+                    ? moment(item.time.substring(11, 14), "H").format("h a")
+                    : "Now"}
                 </div>
                 <div className="Secondchild">
                   <img src={item.condition.icon}></img>
@@ -179,7 +178,39 @@ const ShowWeather = (weatherData) => {
           })}
         </div>
       </div>
-      <div className="sevendayForecast">sevenday forecast data</div>
+      <div className="hourlyForecast">
+        <div className="hourlyForecastContainer">
+          {dailyWeather.map((item, index) => {
+            return (
+              <div className={`hourlyContainer ${index}`} key={index}>
+                <div className="Firstchild">
+                  {index !== 0
+                    ? moment(item.date, "YYYY-MM-DD")
+                        .format("dddd")
+                        .substring(0, 3)
+                    : "Today"}
+                </div>
+                <div className="Secondchild">
+                  <img src={item.day.condition.icon}></img>
+                </div>
+                <div className="Thirdchild">
+                  {item.day.daily_chance_of_rain < 10
+                    ? ""
+                    : item.day.daily_chance_of_rain + "%"}
+                </div>
+                <span className="sevenFifth">
+                  <WiDirectionUp />
+                  {item.day.maxtemp_f}°F
+                </span>
+                <div className="sevenFourth">
+                  <WiDirectionDown />
+                  {item.day.mintemp_f}°F
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      </div>
     </div>
   );
 };
