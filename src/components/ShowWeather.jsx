@@ -59,6 +59,9 @@ const ShowWeather = (weatherData) => {
         <h2 className="current country">
           {weatherData.weatherData.location.country}
         </h2>
+        <div className="current ctext">
+          {weatherData.weatherData.current.condition.text}
+        </div>
         <img
           className="current cimage"
           src={weatherData.weatherData.current.condition.icon}
@@ -67,9 +70,6 @@ const ShowWeather = (weatherData) => {
         <span className="current temp">
           {weatherData.weatherData.current.temp_f}°F
         </span>
-        <div className="current ctext">
-          {weatherData.weatherData.current.condition.text}
-        </div>
       </div>
       <div className="windInfo">
         <h3 className="date">
@@ -179,6 +179,7 @@ const ShowWeather = (weatherData) => {
         </div>
       </div>
       <div className="hourlyForecast">
+        <div className="hourlyTitle">Weekly Forecast</div>
         <div className="hourlyForecastContainer">
           {dailyWeather.map((item, index) => {
             return (
@@ -203,7 +204,7 @@ const ShowWeather = (weatherData) => {
                   {item.day.maxtemp_f}°F
                 </span>
                 <div className="sevenFourth">
-                  <WiDirectionDown />
+                  <WiDirectionDown className="down" />
                   {item.day.mintemp_f}°F
                 </div>
               </div>

@@ -1,10 +1,6 @@
 .weatherCard {
     width: 65%;
     height: 80%;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     display: flex;
     justify-content: space-evenly;
     align-content: stretch;
@@ -12,6 +8,8 @@
     row-gap: 20px;
     column-gap: 12px;
     user-select: none;
+    margin: auto;
+    margin-top: 4%;
 }
 
 .currentWeather, .windInfo, .hourlyForecast, .sevendayForecast {
@@ -56,18 +54,8 @@
     opacity: .5;
 }
 
-.cimage {
-   position: relative;
-   top: 22%;
-   left: 3%;
-}
-
 .temp {
     font-size: 5rem;
-    left: 1%;
-    position: relative;
-    bottom: 5%;
-    top: 20%;
 }
 
 .cimage, .temp {
@@ -76,8 +64,6 @@
 
 .ctext {
     font-size: 3rem;
-    position: relative;
-    bottom: 30%;
     opacity: .5;
 }
 
@@ -186,4 +172,3 @@
     display: inline-block;
     border-radius: 5px;
 }
-
