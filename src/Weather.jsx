@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import "./Weather.css";
 import ShowWeather from "./components/ShowWeather";
 const Weather = () => {
   const params = new Proxy(new URLSearchParams(window.location.search), {
@@ -21,7 +22,7 @@ const Weather = () => {
   }, []);
 
   if (weatherData === undefined) {
-    return <div>Loading...</div>;
+    return <span className="loader"></span>;
   }
   return (
     <div>
