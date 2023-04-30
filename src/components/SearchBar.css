@@ -1,0 +1,59 @@
+.search-bar {
+    margin: auto;
+}
+
+.search {
+    width: 50vw;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.weatherInput {
+    -webkit-appearance: none;
+  -moz-appearance:    none;
+  appearance:         none;
+  border: none;
+  width: 50%;
+  height: 10%;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  text-indent: 15px;
+  font-family: 'Carlito', sans-serif;
+  background-color: black;
+  outline: 2px solid white;
+  color: white;
+}
+
+.weatherInput:focus {
+    outline: 2px solid #d4418e;
+    background-color: black;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    display: inline-block;
+    border-radius: 50px;
+    width: 5%;
+    height: 8%;
+    cursor: pointer;
+    position: relative;
+    left: 49%;
+    padding: 5px;
+    background-color: white;
+    color: #d4418e;
+    transition: .5s;
+}
+
+.searchInput:hover {
+    background-color: #d4418e;
+    color: white;
+    width: 8%;
+}
+
+.searchIcon {
+    font-size: 1.5rem;
+}
