@@ -14,8 +14,112 @@
 
 .currentWeather, .windInfo, .hourlyForecast, .sevendayForecast {
     border-radius: 20px;
-    background-color: #d4418e;
-    background-image: linear-gradient(315deg, #d4418e 0%, #0652c5 74%);
+    outline: 3px solid var(--main-outline);
+    background-color: var(--main-background);
+}
+
+.currentWeather:hover, .windInfo:hover, .hourlyForecast:hover, .sevendayForecast:hover {
+    outline: 3px solid white;
+}
+
+.currentWeather {
+    animation: currentW 1s ease;
+}
+
+.windInfo {
+    animation: windI 1s ease .4s backwards;
+}
+
+.hourlyForecast {
+    animation: hourlyF 1s ease .6s backwards;
+}
+
+.sevendayForecast {
+    animation: sevendayF 1s ease .8s backwards;
+}
+
+@keyframes currentW {
+    0% {
+        position: relative;
+        right: 100%;
+        opacity: 0;
+        overflow: hidden;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        right: 0%;
+    }
+}
+
+@keyframes windI {
+    0% {
+        position: relative;
+        left: 100%;
+        opacity: 0;
+        overflow: hidden;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        left: 0%;
+    }
+}
+
+@keyframes hourlyF {
+    0% {
+        position: relative;
+        top: 100%;
+        margin-bottom: 70%;
+        opacity: 0;
+        overflow: hidden;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        top: 0%;
+        margin-bottom: 0%;
+    }
+}
+
+@keyframes sevendayF {
+    0% {
+        opacity: 0;
+        overflow: hidden;
+    }
+    25% {
+        opacity: .25;
+    }
+    50% {
+        opacity: .5;
+    }
+    75% {
+        opacity: .75;
+    }
+    100% {
+        
+    }
 }
 
 .currentWeather {
@@ -45,6 +149,7 @@
     font-size: 3em;
     margin-bottom: 0px;
     margin-top: 10px;
+    color: var(--main-outline);
 }
 
 .country {
@@ -110,9 +215,13 @@
 
 .info {
     font-size: 2rem;
-    background-color: rgba(0, 0, 0, .5);
+    background-color: rgb(44, 44, 44);
     border-radius: 10px;
     padding: .5%;
+}
+
+.info:hover {
+    outline: 2px solid white;
 }
 
 .itext {

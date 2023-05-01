@@ -82,7 +82,7 @@ const ShowWeather = (weatherData) => {
           {moment(
             weatherData.weatherData.location.localtime.substring(11, 17),
             "HH:mm"
-          ).format("hh:mm a")}
+          ).format("h:mm a")}
         </h2>
         <div className="infoContainer">
           <div className="info row1">

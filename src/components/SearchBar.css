@@ -30,7 +30,7 @@
 }
 
 .weatherInput:focus {
-    outline: 2px solid #d4418e;
+    outline: 2px solid var(--main-outline);
     background-color: black;
 }
 
@@ -46,12 +46,12 @@
     left: 49%;
     padding: 5px;
     background-color: white;
-    color: #d4418e;
+    color: var(--main-outline);
     transition: .5s;
 }
 
 .searchInput:hover {
-    background-color: #d4418e;
+    background-color: var(--main-outline);
     color: white;
     width: 8%;
 }
