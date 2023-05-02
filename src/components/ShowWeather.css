@@ -126,7 +126,7 @@
     flex-basis: 29%;
     position: relative;
     color: white;
-    font-family: 'Carlito', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 .windInfo {
@@ -148,13 +148,13 @@
 .region {
     font-size: 3em;
     margin-bottom: 0px;
-    margin-top: 10px;
+    margin-top: 20px;
     color: var(--main-outline);
 }
 
 .country {
     font-size: 1.5em;
-    margin-top: -5px;
+    margin-top: 5px;
     margin-bottom: 0px;
     opacity: .5;
 }
@@ -175,7 +175,7 @@
 .windInfo {
     position: relative;
     color: white;
-    font-family: 'Carlito', sans-serif;
+    font-family: 'Comfortaa', cursive;
 }
 
 .date {
@@ -195,7 +195,7 @@
 .infoContainer {
     display: flex;
     flex-wrap: wrap;
-    width: 90%;
+    width: 95%;
     justify-content: space-evenly;
     align-content: stretch;
     column-gap: 8px;
@@ -243,8 +243,8 @@
 .hourlyForecast {
     position: relative;
     color: white;
-    font-family: 'Carlito', sans-serif;
-    padding: 20px;
+    font-family: 'Comfortaa', cursive;
+    padding: 9px;
     padding-bottom: 30px;
 }
 
@@ -269,7 +269,7 @@
 }
 
 .Fourthchild {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
 }
 
 .hourlyTitle {

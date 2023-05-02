@@ -19,6 +19,9 @@ const SearchBar = () => {
   };
   return (
     <div className="search-bar">
+      <div className="title">
+        A simple weather app, made just for <span className="you">you</span>
+      </div>
       <form className="search" action="/weather">
         <button
           onClick={() =>
@@ -37,7 +40,7 @@ const SearchBar = () => {
           required
           type="text"
           name="search"
-          placeholder="Search"
+          placeholder="Enter a city name"
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />

@@ -8,8 +8,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 60px;
+    margin: auto;
     position: relative;
+    right: 5%;
+    animation: fadeIn 1.5s linear .3s backwards;
+    bottom: 50px;
 }
 
 .weatherInput {
@@ -72,4 +75,108 @@
 
 .geoicon {
     font-size: 1.5rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.title {
+    color: white;
+    font-family: 'Carlito', sans-serif;
+    font-size: 4rem;
+    width: 60%;
+    animation: fadeIn 1.5s linear .3s backwards;
+}
+
+.you {
+    color: var(--main-outline);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .title {
+        margin: auto;
+    }
+  }
+
+@media screen and (min-width: 768px)
+and (max-width: 1024px) {
+    .search {
+        width: 70vw;
+    }
+    .title {
+        margin: auto;
+    }
+    .weatherInput {
+        width: 80%;
+        padding-inline-end: 100px;
+    }
+    .searchInput {
+        left: 79%;
+        width: 8%;
+    }
+    .searchInput:hover {
+        width: 11%;
+    }
+    .geolocation {
+        left: 79%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .search {
+        width: 90vw;
+    }
+    .title {
+        margin: auto;
+    }
+    .weatherInput {
+        width: 100%;
+        padding-inline-end: 140px;
+    }
+    .searchInput {
+        left: 79%;
+        width: 16%;
+    }
+    .searchInput:hover {
+        width: 16%;
+    }
+    .geolocation {
+        left: 79%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .search {
+        width: 90vw;
+    }
+    .title {
+        margin: auto;
+    }
+    .weatherInput {
+        width: 100%;
+        padding-inline-end: 100px;
+    }
+    .searchInput {
+        left: 76%;
+        width: 16%;
+    }
+    .searchInput:hover {
+        width: 16%;
+    }
+    .geolocation {
+        left: 76%;
+    }
 }
