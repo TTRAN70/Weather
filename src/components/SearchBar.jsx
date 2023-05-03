@@ -22,7 +22,7 @@ const SearchBar = () => {
       <div className="title">
         A simple weather app, made just for <span className="you">you</span>
       </div>
-      <form className="search" action="/weather">
+      <form className="search" action="/Weather-App/weather">
         <button
           onClick={() =>
             navigator.geolocation.getCurrentPosition(successSearch, errorSearch)

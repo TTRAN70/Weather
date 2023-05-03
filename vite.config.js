@@ -6,6 +6,6 @@ export default defineConfig({
   base: "/Weather-App/",
   plugins: [react()],
   server: {
-    port: 8000,
+    port: 3000,
   },
 });
