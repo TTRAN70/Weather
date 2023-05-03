@@ -22,7 +22,11 @@ const SearchBar = () => {
       <div className="title">
         A simple weather app, made just for <span className="you">you</span>
       </div>
-      <form className="search" action="/Weather-App/weather">
+      <form
+        onSubmit={(e) => e.preventDefault}
+        className="search"
+        action="/Weather-App/weather"
+      >
         <button
           onClick={() =>
             navigator.geolocation.getCurrentPosition(successSearch, errorSearch)
@@ -32,7 +36,11 @@ const SearchBar = () => {
         >
           <HiOutlineLocationMarker className="geoicon" />
         </button>
-        <button className="searchInput" type="submit">
+        <button
+          onClick={(e) => e.preventDefault}
+          className="searchInput"
+          type="submit"
+        >
           <HiMagnifyingGlass className="searchIcon" />
         </button>
         <input
