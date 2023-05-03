@@ -25,7 +25,7 @@ const SearchBar = () => {
       <form
         onSubmit={(e) => e.preventDefault}
         className="search"
-        action="/Weather-App/weather"
+        action="/weather"
       >
         <button
           onClick={() =>
