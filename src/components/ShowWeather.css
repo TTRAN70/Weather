@@ -281,3 +281,139 @@
     display: inline-block;
     border-radius: 5px;
 }
+
+@media screen and (max-width: 1500px) {
+    .currentWeather {
+        flex-basis: 99%;
+    }
+    
+    .windInfo {
+        flex-basis: 99%;
+    }
+    
+    .hourlyForecast {
+        flex-basis: 100%;
+        width: 50%;
+    }
+    .hourlyForecastContainer { 
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .hourlyContainer {
+        font-size: 1rem;
+    }
+    .Fourthchild {
+        font-size: 1rem;
+    }
+    .w {
+        margin-left: 80px;
+    }
+  }
+
+@media screen and (min-width: 768px)
+and (max-width: 1500px) {
+    .currentWeather {
+        flex-basis: 50vw;
+    }
+    
+    .windInfo {
+        flex-basis: 50vw;
+    }
+    
+    .hourlyForecast {
+        flex-basis: 50vw;
+        width: 50vw;
+    }
+    .hourlyForecastContainer { 
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .hourlyContainer {
+        font-size: 1rem;
+    }
+    .Fourthchild {
+        font-size: 1rem;
+    }
+    .w {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .currentWeather {
+        flex-basis: 50vw;
+    }
+    
+    .windInfo {
+        flex-basis: 50vw;
+    }
+    
+    .hourlyForecast {
+        flex-basis: 50vw;
+        width: 50vw;
+    }
+    .hourlyForecastContainer { 
+        justify-content: flex-start;
+        overflow-x: auto;
+    }
+    .hourlyContainer {
+        font-size: 1rem;
+    }
+    .Fourthchild {
+        font-size: 1rem;
+    }
+    .w {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .currentWeather {
+        flex-basis: 50vw;
+    }
+    
+    .windInfo {
+        flex-basis: 70vw;
+    }
+    
+    .hourlyForecast {
+        flex-basis: 70vw;
+    }
+    .hourlyForecastContainer { 
+        justify-content: flex-start;
+        overflow-x: auto;
+        column-gap: 0;
+    }
+    .hourlyContainer {
+        font-size: 1rem;
+    }
+    .Fourthchild {
+        font-size: 1rem;
+    }
+    .w {
+        margin-left: 30px;
+    }
+    .date {
+        top: -1%;
+    }
+    .time {
+        font-size: 1.3rem;
+        margin-top: 50px;
+    }
+    .info {
+        font-size: 1.8rem;
+        padding: 10px;
+        width: 100%;
+        height: 100%;
+    }
+    .row1 {
+        flex-basis: 90%;
+    }
+    
+    .row2 {
+        flex-basis: 90%;
+    }
+    .infoContainer {
+        margin-top: 50px;
+    }
+}
