@@ -34,14 +34,10 @@
     animation: hourlyF 1s ease .6s backwards;
 }
 
-.sevendayForecast {
-    animation: sevendayF 1s ease .8s backwards;
-}
-
 @keyframes currentW {
     0% {
         position: relative;
-        right: 100%;
+        right: 50%;
         opacity: 0;
         overflow: hidden;
     }
@@ -62,7 +58,7 @@
 @keyframes windI {
     0% {
         position: relative;
-        left: 100%;
+        left: 50%;
         opacity: 0;
         overflow: hidden;
     }
@@ -83,23 +79,27 @@
 @keyframes hourlyF {
     0% {
         position: relative;
-        top: 100%;
-        margin-bottom: 70%;
+        top: 20%;
+        margin-bottom: 20%;
         opacity: 0;
         overflow: hidden;
     }
     25% {
         opacity: .25;
+        overflow: hidden;
     }
     50% {
         opacity: .5;
+        overflow: hidden;
     }
     75% {
         opacity: .75;
+        overflow: hidden;
     }
     100% {
         top: 0%;
         margin-bottom: 0%;
+        overflow: hidden;
     }
 }
 

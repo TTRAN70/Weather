@@ -1,9 +1,11 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 const SearchBar = () => {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
   const successSearch = (position) => {
     const fetchData = async () => {
       const response = await fetch(
@@ -17,16 +19,16 @@ const SearchBar = () => {
   const errorSearch = (error) => {
     console.error(error);
   };
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate("/weather?search=" + search);
+  };
   return (
     <div className="search-bar">
       <div className="title">
         A simple weather app, made just for <span className="you">you</span>
       </div>
-      <form
-        onSubmit={(e) => e.preventDefault}
-        className="search"
-        action="/weather"
-      >
+      <form onSubmit={(e) => handleSubmit(e)} className="search">
         <button
           onClick={() =>
             navigator.geolocation.getCurrentPosition(successSearch, errorSearch)

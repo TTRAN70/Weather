@@ -180,7 +180,7 @@ const ShowWeather = (weatherData) => {
       </div>
       <div className="hourlyForecast">
         <div className="hourlyTitle">Weekly Forecast</div>
-        <div className="hourlyForecastContainer w">
+        <div className="hourlyForecastContainer">
           {dailyWeather.map((item, index) => {
             return (
               <div className={`hourlyContainer ${index}`} key={index}>
