@@ -17,7 +17,7 @@ const SearchBar = () => {
     fetchData();
   };
   const errorSearch = (error) => {
-    console.error(error);
+    console.log("oh no!");
   };
   const handleSubmit = (event) => {
     event.preventDefault();

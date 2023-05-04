@@ -10,7 +10,7 @@ const Weather = () => {
   const [weatherData, setWeatherData] = useState(undefined);
   const fetchData = async () => {
     const response = await fetch(
-      `http://api.weatherapi.com/v1/forecast.json?key=${
+      `https://api.weatherapi.com/v1/forecast.json?key=${
         import.meta.env.VITE_REACT_API_KEY
       }&q=${searchInfo}&days=7`
     );
