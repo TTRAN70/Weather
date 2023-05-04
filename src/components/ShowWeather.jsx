@@ -41,7 +41,7 @@ const ShowWeather = (weatherData) => {
   };
   const formatDailyForecast = () => {
     let dailyArray = [];
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < 3; i++) {
       dailyArray.push(weatherData.weatherData.forecast.forecastday[i]);
     }
     setDailyWeather(dailyArray);
@@ -178,9 +178,9 @@ const ShowWeather = (weatherData) => {
           })}
         </div>
       </div>
-      <div className="hourlyForecast">
-        <div className="hourlyTitle">Weekly Forecast</div>
-        <div className="hourlyForecastContainer">
+      <div className="sevendayForecast">
+        <div className="hourlyTitle">3-Day Forecast</div>
+        <div className="sevendayForecastContainer">
           {dailyWeather.map((item, index) => {
             return (
               <div className={`hourlyContainer ${index}`} key={index}>

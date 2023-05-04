@@ -34,6 +34,10 @@
     animation: hourlyF 1s ease .6s backwards;
 }
 
+.sevendayForecast {
+    animation: sevendayF 1s ease 1s backwards;
+}
+
 @keyframes currentW {
     0% {
         position: relative;
@@ -80,33 +84,27 @@
     0% {
         position: relative;
         top: 20%;
-        margin-bottom: 20%;
         opacity: 0;
-        overflow: hidden;
     }
     25% {
         opacity: .25;
-        overflow: hidden;
     }
     50% {
         opacity: .5;
-        overflow: hidden;
     }
     75% {
         opacity: .75;
-        overflow: hidden;
     }
     100% {
         top: 0%;
-        margin-bottom: 0%;
-        overflow: hidden;
     }
 }
 
 @keyframes sevendayF {
     0% {
+        position: relative;
+        top: 10%;
         opacity: 0;
-        overflow: hidden;
     }
     25% {
         opacity: .25;
@@ -118,7 +116,8 @@
         opacity: .75;
     }
     100% {
-        
+        top: 0%;
+        margin-bottom: 0%;
     }
 }
 
@@ -257,6 +256,15 @@
     margin: auto;
 }
 
+.sevendayForecastContainer {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    align-content: stretch;
+    column-gap: 30px;
+    margin: auto;
+}
+
 .hourlyContainer {
     text-align: center;
     font-size: 1.3rem;
@@ -280,6 +288,14 @@
     padding: 5px;
     display: inline-block;
     border-radius: 5px;
+}
+
+.sevendayForecast {
+    position: relative;
+    color: white;
+    font-family: 'Comfortaa', cursive;
+    padding: 9px;
+    padding-bottom: 30px;
 }
 
 @media screen and (max-width: 1500px) {
