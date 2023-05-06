@@ -55,7 +55,7 @@ Project Link: [https://github.com/TTRAN70/Weather-App](https://github.com/TTRAN7
 
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Dependencies and Resources used
 
 * [CSS Flexbox Cheatsheet](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 * [React Icons](https://react-icons.github.io/react-icons/search)
