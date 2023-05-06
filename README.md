@@ -61,6 +61,7 @@ Dependencies and Resources used
 * [React Icons](https://react-icons.github.io/react-icons/search)
 * [MomentJS](https://momentjs.com/)
 * [React Router](https://reactrouter.com/en/main)
+* Powered by <a href="https://www.weatherapi.com/" title="Free Weather API">WeatherAPI.com</a>
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
