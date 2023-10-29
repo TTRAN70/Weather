@@ -12,7 +12,7 @@
     position: relative;
     right: 5%;
     animation: fadeIn 1.5s linear .3s backwards;
-    bottom: 50px;
+    bottom: 120px;
 }
 
 .weatherInput {
@@ -56,7 +56,6 @@
 .searchInput:hover {
     background-color: var(--main-outline);
     color: white;
-    width: 8%;
 }
 
 .searchIcon {
@@ -85,11 +84,14 @@ input:-webkit-autofill:active {
 }
 
 .title {
+    display: flex;
+    justify-content: center;
     color: white;
     font-family: 'Carlito', sans-serif;
-    font-size: 4rem;
-    width: 60%;
+    font-size: 8rem;
+    width: 100%;
     animation: fadeIn 1.5s linear .3s backwards;
+    margin: auto;
 }
 
 .you {
@@ -127,9 +129,6 @@ and (max-width: 1024px) {
         left: 79%;
         width: 8%;
     }
-    .searchInput:hover {
-        width: 11%;
-    }
     .geolocation {
         left: 79%;
     }
@@ -148,9 +147,6 @@ and (max-width: 1024px) {
     }
     .searchInput {
         left: 79%;
-        width: 16%;
-    }
-    .searchInput:hover {
         width: 16%;
     }
     .geolocation {
@@ -173,10 +169,31 @@ and (max-width: 1024px) {
         left: 76%;
         width: 16%;
     }
-    .searchInput:hover {
-        width: 16%;
-    }
     .geolocation {
         left: 76%;
     }
+}
+
+.citiesList {
+    background-color: rgb(17 24 39);
+    position: absolute;
+    color: #d1d5db;
+    top: 57%;
+    border-radius: 25px;
+    width: 50%;
+    margin-left: 8%;
+    font-family: 'Carlito', sans-serif;
+    overflow: hidden;
+    
+}
+
+.city {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding: 0.7em 1em 0.7em 1.5em;
+}
+
+.city:hover {
+    background-color: rgb(39, 48, 68);
+    cursor: pointer;
 }

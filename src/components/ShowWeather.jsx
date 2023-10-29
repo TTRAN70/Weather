@@ -1,8 +1,9 @@
 import "./ShowWeather.css";
 import moment from "moment";
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { FiWind } from "react-icons/fi";
-import { BsThermometerHalf } from "react-icons/bs";
+import { BsThermometerHalf, BsArrowLeftCircleFill } from "react-icons/bs";
 import {
   WiSunrise,
   WiHumidity,
@@ -16,6 +17,7 @@ import {
 const ShowWeather = (weatherData) => {
   const [hourlyWeather, setHourlyWeather] = useState([]);
   const [dailyWeather, setDailyWeather] = useState([]);
+  const navigate = useNavigate();
   const formatHourlyForecast = () => {
     let hourArray = [];
     let hour = parseInt(
@@ -46,12 +48,16 @@ const ShowWeather = (weatherData) => {
     }
     setDailyWeather(dailyArray);
   };
+  const goBack = () => {
+    navigate("/");
+  };
   useEffect(() => {
     formatHourlyForecast();
     formatDailyForecast();
   }, []);
   return (
     <div className="weatherCard">
+      <BsArrowLeftCircleFill onClick={() => goBack()} className="back" />
       <div className="currentWeather">
         <h1 className="current region">
           {weatherData.weatherData.location.name}

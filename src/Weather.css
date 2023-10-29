@@ -6,7 +6,7 @@
     box-sizing: border-box;
     position: relative;
     margin-top: 45vh;
-    color: #d4418e;
+    color: #00A9FF;
   }
   .loader::after {
     content: '';  
@@ -17,7 +17,7 @@
     bottom: 0;
     position: absolute;
     border-radius: 50% 50% 0;
-    border: 15px solid #d4418e;
+    border: 15px solid #00A9FF;
     transform: rotate(45deg) translate(0, 0);
     box-sizing: border-box;
     animation: animMarker 0.4s ease-in-out infinite alternate;

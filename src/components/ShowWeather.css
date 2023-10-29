@@ -12,9 +12,21 @@
     margin-top: 4%;
 }
 
+.back {
+    position: absolute;
+    fill: white;
+    width: 9%;
+    height: 9%;
+    left: 0;
+    top: 5%;
+}
+.back:hover {
+    fill:var(--main-outline);
+    cursor: pointer;
+}
+
 .currentWeather, .windInfo, .hourlyForecast, .sevendayForecast {
     border-radius: 20px;
-    outline: 3px solid var(--main-outline);
     background-color: var(--main-background);
 }
 
