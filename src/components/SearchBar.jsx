@@ -56,7 +56,7 @@ const SearchBar = () => {
   return (
     <div className="search-bar">
       <div className="title">
-        <span className="you">Blue</span>Snow
+        <span className="you">Express</span>Weather
       </div>
       <form
         autoComplete="off"
@@ -84,7 +84,7 @@ const SearchBar = () => {
           required
           type="text"
           name="search"
-          placeholder="Enter a city name or zip code"
+          placeholder="City name or zip code"
           onChange={(e) => setSearch(e.target.value)}
           value={search}
         />
