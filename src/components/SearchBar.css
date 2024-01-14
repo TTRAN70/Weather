@@ -35,7 +35,7 @@
   -moz-appearance:    none;
   appearance:         none;
   border: none;
-  width: 40%;
+  width: 300px;
   padding-top: 5px;
   padding-bottom: 5px;
   font-size: 1.3rem;
@@ -187,4 +187,42 @@ input:-webkit-autofill:active {
 
 .cursor {
     height: 100%;
+}
+
+
+@media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) { 
+    .newTitle {
+        left: 20%;
+        font-size: 3rem;
+        width: 70%;
+    }
+    .search {
+        margin-right: 0;
+    }
+    .title {
+        font-size: 1.5rem;
+    }
+    .geolocation {
+        left: 85%;
+        position: absolute;
+        top: 25px;
+    }
+    .weatherInput {
+        width: 250px;
+        padding-inline-end: 63px;
+    }
+    .searchInput {
+        position: absolute;
+        left: 38%;
+        top: 7px;
+    }
+    .citiesList {
+        width: 45%;
+        top: 7%;
+        margin-left: 7%;
+    }
 }

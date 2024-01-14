@@ -129,3 +129,40 @@
       transform: scale(1);
     }
   }
+
+  @media only screen 
+  and (min-device-width: 375px) 
+  and (max-device-width: 812px) 
+  and (-webkit-min-device-pixel-ratio: 3)
+  and (orientation: portrait) {
+    .mobileCurrent {
+      height: 206px;
+    }
+    .skeleton-text {
+      margin-top: 7%;
+      margin-left: 13%;
+    }
+    .skeleton-wind {
+      width: 60%;
+      height: 10%;
+    }
+    .badWind {
+      height: 650px;
+      padding-bottom: 20px;
+    }
+    .fixWind {
+      top: 9%;
+    }
+    .mobileHourly {
+      height: 200px;
+    }
+    .mobileSeven {
+      height: 200px;
+    }
+    .erm {
+      margin-top: 7%;
+    }
+    .skeleton-hour {
+      width: 30% !important;
+    }
+  }

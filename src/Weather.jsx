@@ -46,13 +46,13 @@ const Weather = () => {
       <div class="fixWidth">
         <NavBar />
         <div className="weatherCard fixWeatherCard">
-          <div className="currentWeather bad">
+          <div className="currentWeather bad mobileCurrent">
             <div className="skeleton skeleton-text"></div>
             <div className="skeleton skeleton-text"></div>
             <div className="skeleton skeleton-text"></div>
             <div className="skeleton skeleton-text"></div>
           </div>
-          <div className="windInfo bad">
+          <div className="windInfo bad badWind">
             <div className="fixWind">
               <div className="skeleton skeleton-wind"></div>
               <div className="skeleton skeleton-wind"></div>
@@ -64,7 +64,7 @@ const Weather = () => {
               <div className="skeleton skeleton-wind"></div>
             </div>
           </div>
-          <div className="hourlyForecast bad">
+          <div className="hourlyForecast bad mobileHourly">
             <div className="erm">
               <div className="skeleton skeleton-hour"></div>
               <div className="skeleton skeleton-hour"></div>
@@ -80,7 +80,7 @@ const Weather = () => {
               <div className="skeleton skeleton-hour"></div>
             </div>
           </div>
-          <div className="sevendayForecast bad">
+          <div className="sevendayForecast bad mobileSeven">
             <div className="erm mre">
               <div className="skeleton skeleton-hour"></div>
               <div className="skeleton skeleton-hour"></div>
