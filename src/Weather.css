@@ -36,7 +36,82 @@
     background: rgba(0, 0, 0, 0.2);
     animation: animShadow 0.4s ease-in-out infinite alternate;
   }
-  
+
+  .changeBack {
+    background-color: #000000;
+  }
+
+  .fixWeatherCard {
+    margin-top: 3% !important;
+  }
+
+  .bad:hover {
+    outline: none !important;
+  }
+
+  .skeleton {
+    animation: skeleton-loading 1s linear infinite alternate;
+    border-radius: 10px;
+  }
+
+  .skeleton-text {
+    width: 70%;
+    height: 10%;
+    margin-top: 10%;
+    margin-left: 7%;
+    padding-top: 4px;
+  }
+
+  .skeleton-wind {
+    width: 20%;
+    height: 25%;
+  }
+
+  .fixWind {
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
+    justify-content: space-evenly;
+    column-gap: 8px;
+    row-gap: 5px;
+    position: relative;
+    top: 15%;
+    left: 10%;
+  }
+
+  .skeleton-hour {
+    width: 15% !important;
+    height: 80% !important;
+    margin-left: 2%;
+  }
+
+  .erm {
+    height: 100%;
+    width: 95%;
+    display: flex;
+    margin-top: 2.5%;
+    position: relative;
+    left: 1.5%;
+  }
+
+  .mre {
+    justify-content: center;
+  }
+
+  .fixWidth {
+    width: 100% !important;
+}
+
+  @keyframes skeleton-loading {
+    0% {
+      background-color: hsl(0, 0%, 35%);
+    }
+    100% {
+      background-color: hsl(0, 0%, 50%);
+    }
+  }
+
   @keyframes animMarker {
     0% {
       transform: rotate(45deg) translate(5px, 5px);

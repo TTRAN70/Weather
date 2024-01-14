@@ -9,7 +9,7 @@
     column-gap: 12px;
     user-select: none;
     margin: auto;
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
 .back {
@@ -31,24 +31,9 @@
 }
 
 .currentWeather:hover, .windInfo:hover, .hourlyForecast:hover, .sevendayForecast:hover {
-    outline: 3px solid white;
+    outline: 2px solid white;
 }
 
-.currentWeather {
-    animation: currentW 1s ease;
-}
-
-.windInfo {
-    animation: windI 1s ease .4s backwards;
-}
-
-.hourlyForecast {
-    animation: hourlyF 1s ease .6s backwards;
-}
-
-.sevendayForecast {
-    animation: sevendayF 1s ease 1s backwards;
-}
 
 @keyframes currentW {
     0% {
@@ -179,8 +164,9 @@
 }
 
 .ctext {
-    font-size: 3rem;
+    font-size: 1.5rem;
     opacity: .5;
+    margin-top: 2%;
 }
 
 .windInfo {
@@ -191,15 +177,15 @@
 
 .date {
     position: relative;
-    top: 1%;
-    left: 5%;
+    top: -8%;
+    left: 6%;
     opacity: .5;
 }
 
 .time {
     position: relative;
-    bottom: 5%;
-    left: 5%;
+    bottom: 2%;
+    left: 6%;
     font-size: 2rem;
 }
 
@@ -213,7 +199,7 @@
     row-gap: 30px;
     position: relative;
     bottom: 8%;
-    left: 5%;
+    left: 2.5%;
 }
 
 .row1 {
@@ -236,8 +222,10 @@
 }
 
 .itext {
-    font-size: 1rem;
+    font-size: 0.8rem;
     opacity: .5;
+    position: relative;
+    bottom: 7px;
 }
 
 .icon {
@@ -249,6 +237,7 @@
 .currentData {
     position: relative;
     left: 4%;
+    font-size: 1.7rem;
 }
 
 .hourlyForecast {

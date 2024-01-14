@@ -1,7 +1,6 @@
 import "./ShowWeather.css";
 import moment from "moment";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { FiWind } from "react-icons/fi";
 import { BsThermometerHalf, BsArrowLeftCircleFill } from "react-icons/bs";
 import {
@@ -17,7 +16,6 @@ import {
 const ShowWeather = (weatherData) => {
   const [hourlyWeather, setHourlyWeather] = useState([]);
   const [dailyWeather, setDailyWeather] = useState([]);
-  const navigate = useNavigate();
   const formatHourlyForecast = () => {
     let hourArray = [];
     let hour = parseInt(
@@ -48,16 +46,12 @@ const ShowWeather = (weatherData) => {
     }
     setDailyWeather(dailyArray);
   };
-  const goBack = () => {
-    navigate("/");
-  };
   useEffect(() => {
     formatHourlyForecast();
     formatDailyForecast();
   }, []);
   return (
     <div className="weatherCard">
-      <BsArrowLeftCircleFill onClick={() => goBack()} className="back" />
       <div className="currentWeather">
         <h1 className="current region">
           {weatherData.weatherData.location.name}
@@ -78,11 +72,6 @@ const ShowWeather = (weatherData) => {
         </span>
       </div>
       <div className="windInfo">
-        <h3 className="date">
-          {moment(
-            weatherData.weatherData.location.localtime.substring(0, 11)
-          ).format("MMMM Do, YYYY")}
-        </h3>
         <h2 className="time">
           Local Time:{" "}
           {moment(
@@ -90,13 +79,19 @@ const ShowWeather = (weatherData) => {
             "HH:mm"
           ).format("h:mm a")}
         </h2>
+        <h3 className="date">
+          {moment(
+            weatherData.weatherData.location.localtime.substring(0, 11)
+          ).format("MMMM Do, YYYY")}
+        </h3>
         <div className="infoContainer">
           <div className="info row1">
             <div className="itext">
               <WiThermometer className="icon" /> High
             </div>
             <div className="currentData">
-              {weatherData.weatherData.forecast.forecastday[0].day.maxtemp_f}°F
+              {weatherData.weatherData.forecast.forecastday[0].day.maxtemp_f}
+              °F
             </div>
           </div>
           <div className="info row1">
@@ -128,7 +123,8 @@ const ShowWeather = (weatherData) => {
               <WiThermometerExterior className="icon" /> Low
             </div>
             <div className="currentData">
-              {weatherData.weatherData.forecast.forecastday[0].day.mintemp_f}°F
+              {weatherData.weatherData.forecast.forecastday[0].day.mintemp_f}
+              °F
             </div>
           </div>
           <div className="info row2">

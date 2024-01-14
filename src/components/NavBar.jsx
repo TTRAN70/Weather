@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";
+import "./NavBar.css";
 import { HiOutlineLocationMarker } from "react-icons/hi";
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { TiWeatherWindyCloudy } from "react-icons/ti";
 
-const SearchBar = () => {
+const NavBar = ({ setWeather }) => {
   const [search, setSearch] = useState("");
   const [cities, setCities] = useState("");
   const navigate = useNavigate();
@@ -24,13 +25,17 @@ const SearchBar = () => {
   };
   const handleSubmit = (event) => {
     event.preventDefault();
+    setWeather(undefined);
     navigate("/weather?search=" + search);
   };
   const handleCities = (event) => {
     event.preventDefault();
+    setWeather(undefined);
     navigate("/weather?search=" + event.target.innerText);
   };
-
+  const goBack = () => {
+    navigate("/");
+  };
   useEffect(() => {
     const fetchCity = async () => {
       const city = await fetch(
@@ -56,9 +61,9 @@ const SearchBar = () => {
     }
   }, [search]);
   return (
-    <div className="search-bar">
+    <div>
       <nav className="navigation">
-        <div className="title">
+        <div onClick={() => goBack()} className="title">
           <TiWeatherWindyCloudy className="windy" /> NEON WEATHER
         </div>
         <form
@@ -108,13 +113,7 @@ const SearchBar = () => {
           </div>
         </form>
       </nav>
-      <div className="newTitle">
-        Hi, Welcome to my <span className="secondTitle">Neon Weather App.</span>
-        <div className="subtext">
-          To get started, enter a city name at the top.
-        </div>
-      </div>
     </div>
   );
 };
-export default SearchBar;
+export default NavBar;
