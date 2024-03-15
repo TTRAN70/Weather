@@ -1,4 +1,4 @@
-# Welcome to my Weather App!
+# Welcome to my Neon Weather!
 
 <a name="readme-top"></a>
 
@@ -21,13 +21,7 @@
 
 ## About The Project
 
-<a href=https://weather-app-pi-lake.vercel.app/>Weather App Link</a>
-
-There are other many great weather apps out there, however, most are distracting so I created my own version that suits some people's needs
-
-* Weather Apps should also look cool, so we added some natural and smooth animations
-* Weather Apps should look responsive, so we also added mobile functionality
-* Weather Apps should work fast, so we made sure to select the right frameworks and dependencies to get the job done as quick as possible
+<a href=https://weather-app-pi-lake.vercel.app/>Neon Weather Link</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
